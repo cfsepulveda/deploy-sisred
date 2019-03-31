@@ -469,9 +469,9 @@ var DetalleRecursoComponent = /** @class */ (function () {
             var json = {
                 name: this.detailResourceForm.controls.name.value,
                 description: this.detailResourceForm.controls.description.value,
-                lastUserModification: 'Crisian Sepulveda XD'
+                lastUserModification: 'Crisian Sepulveda XD',
+                id: this.idResource
             };
-            console.log(json);
             this.resourceDetailsRestClientService.updateResourceDetail(json).subscribe(function (response) {
                 _this.getResourceDetail(_this.idResource);
             });
@@ -611,7 +611,7 @@ var ResourceDetailsRestClientService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (reponse) { return reponse.json(); }));
     };
     ResourceDetailsRestClientService.prototype.updateResourceDetail = function (data) {
-        var json = { "nombre": data.description, "descripcion": data.name, "usuario_ultima_modificacion": data.lastUserModification };
+        var json = { "nombre": data.description, "descripcion": data.name, "usuario_ultima_modificacion": data.lastUserModification, "id": data.id };
         return this.http
             .put(_constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].SERVER_URL + _constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].RESOURCE_DETAILS_UPDATE_ENDPOINT, json)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (reponse) { return reponse.json(); }));
