@@ -363,7 +363,7 @@ var UrlConstant = /** @class */ (function () {
     }
     UrlConstant.SERVER_URL = "https://grupo1-sisred.herokuapp.com";
     UrlConstant.RESOURCE_DETAILS_ENDPOINT = "/recurso/recurso_get/";
-    UrlConstant.RESOURCE_DETAILS_UPDATE_ENDPOINT = "/recurso/recurso_put";
+    UrlConstant.RESOURCE_DETAILS_UPDATE_ENDPOINT = "/recurso/recurso_put/";
     return UrlConstant;
 }());
 
@@ -389,7 +389,7 @@ module.exports = ".details-container{\r\n    width: 100%;\r\n    padding-right: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"details-container\">\r\n  <form [formGroup]=\"detailResourceForm\">\r\n    <div class=\"row border bg-primary\">\r\n      <div class=\"col-sm\">\r\n        <p>Recurso: {{ resourceDetailsoModel?.name }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border align-items-center\">\r\n      <div class=\"col-sm\">\r\n        <div class=\"text-center\">\r\n          <img [src]=\"resourceDetailsoModel?.thumbnail\" width=\"100\" height=\"100\" />\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showInputText\">\r\n      <div class=\"col-sm-6 border\">Nombre</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <input formControlName=\"name\" [(ngModel)]=\"resourceDetailsoModel.name\" type=\"text\" id=\"inputName\"\r\n          placeholder=\"Nombre\" />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Tipo</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.type }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Autor</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.author }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha creacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.creationDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Responsable</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.lastUserModification }}\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha actualizacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.updateDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Descripcion</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.description }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <textarea rows=\"4\" cols=\"38\" formControlName=\"description\" [(ngModel)]=\"resourceDetailsoModel.description\"\r\n          type=\"text\" id=\"inputDescription\" placeholder=\"Description\">\r\n        </textarea>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Metadata</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <div class=\"btn-group btn-space\" role=\"group\" *ngFor=\"let metadata of resourceDetailsoModel?.metadata\">\r\n          <button type=\"button\" class=\"btn btn-outline-primary\">\r\n            {{ metadata }}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border\">\r\n      <button *ngIf=\"!showInputText\" type=\"button\" (click)=\"edit()\" class=\"btn btn-primary btn-lg btn-block\">\r\n        Modificar\r\n      </button>\r\n\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"update()\" class=\"btn btn-primary btn-lg btn-block\"\r\n        [disabled]=\"!detailResourceForm.valid\">\r\n        Actualizar\r\n      </button>\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"cancelEdit()\" class=\"btn btn-secondary btn-lg btn-block\">\r\n        Cancelar\r\n      </button>\r\n    </div>\r\n  </form>\r\n</div>"
+module.exports = "<div class=\"details-container\">\r\n  <form [formGroup]=\"detailResourceForm\">\r\n    <div class=\"row border bg-primary\">\r\n      <div class=\"col-sm\">\r\n        <p>Recurso: {{ resourceDetailsoModel?.name }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border align-items-center\">\r\n      <div class=\"col-sm\">\r\n        <div class=\"text-center\">\r\n          <img [src]=\"resourceDetailsoModel?.thumbnail\" width=\"100\" height=\"100\" />\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showInputText\">\r\n      <div class=\"col-sm-6 border\">Nombre</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <input formControlName=\"name\" [(ngModel)]=\"resourceDetailsoModel.name\" type=\"text\" id=\"inputName\"\r\n          placeholder=\"Nombre\" />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Tipo</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.type }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Autor</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.author }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha creacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.creationDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Responsable</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.lastUserModification }}\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha actualizacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.updateDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Descripcion</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.description }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <textarea rows=\"4\" cols=\"38\" formControlName=\"description\" [(ngModel)]=\"resourceDetailsoModel.description\"\r\n          type=\"text\" id=\"inputDescription\" placeholder=\"Description\">\r\n        </textarea>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Metadata</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <div class=\"btn-group btn-space\" role=\"group\" *ngFor=\"let metadata of resourceDetailsoModel?.metadata\">\r\n          <button type=\"button\" class=\"btn btn-outline-primary\">\r\n            {{ metadata }}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border\">\r\n      <button *ngIf=\"!showInputText\" type=\"button\" (click)=\"edit()\" class=\"btn btn-primary btn-lg btn-block\">\r\n        Modificar\r\n      </button>\r\n\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"updateResource()\" class=\"btn btn-primary btn-lg btn-block\"\r\n        [disabled]=\"!detailResourceForm.valid\">\r\n        Actualizar\r\n      </button>\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"cancelEdit()\" class=\"btn btn-secondary btn-lg btn-block\">\r\n        Cancelar\r\n      </button>\r\n    </div>\r\n  </form>\r\n</div>"
 
 /***/ }),
 
@@ -420,12 +420,12 @@ var DetalleRecursoComponent = /** @class */ (function () {
         this.resourceDetailsRestClientService = resourceDetailsRestClientService;
         this.showInputText = false;
         this.route.params.subscribe(function (param) {
-            _this.getResourceDetail(Number(param["id"]));
             _this.idResource = Number(param["id"]);
         });
     }
     DetalleRecursoComponent.prototype.ngOnInit = function () {
         this.loadForm();
+        this.getResourceDetail(this.idResource);
     };
     DetalleRecursoComponent.prototype.edit = function () {
         this.showInputText = true;
@@ -451,10 +451,9 @@ var DetalleRecursoComponent = /** @class */ (function () {
             _this.resourceDetailsoModel = {
                 type: response.tipo,
                 author: response.getAutor,
-                lastUserModification: response.getResponsableModificacion,
                 updateDate: response.fecha_ultima_modificacion,
                 creationDate: response.fecha_creacion,
-                responsable: response.usuario_ultima_modificacion,
+                lastUserModification: response.getResponsableModificacion,
                 description: response.descripcion,
                 metadata: response.metadata,
                 name: response.nombre,
@@ -462,14 +461,14 @@ var DetalleRecursoComponent = /** @class */ (function () {
             };
         });
     };
-    DetalleRecursoComponent.prototype.update = function () {
+    DetalleRecursoComponent.prototype.updateResource = function () {
         var _this = this;
         this.showInputText = false;
         if (this.detailResourceForm.valid) {
             var json = {
                 name: this.detailResourceForm.controls.name.value,
                 description: this.detailResourceForm.controls.description.value,
-                lastUserModification: 'Crisian Sepulveda XD',
+                lastUserModification: "Cristian Sepulveda XD",
                 id: this.idResource
             };
             this.resourceDetailsRestClientService.updateResourceDetail(json).subscribe(function (response) {
@@ -611,7 +610,7 @@ var ResourceDetailsRestClientService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (reponse) { return reponse.json(); }));
     };
     ResourceDetailsRestClientService.prototype.updateResourceDetail = function (data) {
-        var json = { "nombre": data.description, "descripcion": data.name, "usuario_ultima_modificacion": data.lastUserModification, "id": data.id };
+        var json = { "nombre": data.name, "descripcion": data.description, "usuario_ultima_modificacion": data.lastUserModification, "id": data.id };
         return this.http
             .put(_constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].SERVER_URL + _constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].RESOURCE_DETAILS_UPDATE_ENDPOINT, json)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (reponse) { return reponse.json(); }));
