@@ -468,7 +468,7 @@ var DetalleRecursoComponent = /** @class */ (function () {
             var json = {
                 name: this.detailResourceForm.controls.name.value,
                 description: this.detailResourceForm.controls.description.value,
-                lastUserModification: "Cristian Sepulveda XD",
+                lastUserModification: "1",
                 id: this.idResource
             };
             this.resourceDetailsRestClientService.updateResourceDetail(json).subscribe(function (response) {
