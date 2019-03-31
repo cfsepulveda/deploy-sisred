@@ -362,7 +362,8 @@ var UrlConstant = /** @class */ (function () {
     function UrlConstant() {
     }
     UrlConstant.SERVER_URL = "https://grupo1-sisred.herokuapp.com";
-    UrlConstant.RESOURCE_DETAILS_ENDPOINT = "/recurso/recurso_addget/";
+    UrlConstant.RESOURCE_DETAILS_ENDPOINT = "/recurso/recurso_get/";
+    UrlConstant.RESOURCE_DETAILS_UPDATE_ENDPOINT = "/recurso/recurso_put";
     return UrlConstant;
 }());
 
@@ -388,7 +389,7 @@ module.exports = ".details-container{\r\n    width: 100%;\r\n    padding-right: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"details-container\">\r\n  <form [formGroup]=\"detailResourceForm\">\r\n    <div class=\"row border bg-warning\">\r\n      <div class=\"col-sm\">\r\n        <p>Recurso: {{ resourceDetailsoModel?.name }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border align-items-center\">\r\n      <div class=\"col-sm\">\r\n        <div class=\"text-center\">\r\n          <img\r\n            [src]=\"resourceDetailsoModel?.thumbnail\"\r\n            width=\"100\"\r\n            height=\"100\"\r\n          />\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showInputText\">\r\n      <div class=\"col-sm-6 border\">Nombre</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <input\r\n          formControlName=\"name\"\r\n          [(ngModel)]=\"resourceDetailsoModel.name\"\r\n          type=\"text\"\r\n          id=\"inputName\"\r\n          placeholder=\"Nombre\"\r\n        />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Tipo</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.type }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <input\r\n          formControlName=\"type\"\r\n          [(ngModel)]=\"resourceDetailsoModel.type\"\r\n          type=\"text\"\r\n          id=\"inputType\"\r\n          placeholder=\"Tipo\"\r\n        />\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Autor</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.author }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <input\r\n          formControlName=\"author\"\r\n          [(ngModel)]=\"resourceDetailsoModel.author\"\r\n          type=\"text\"\r\n          id=\"inputType\"\r\n          placeholder=\"Autor\"\r\n        />\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha creacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.creationDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha actualizacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.updateDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Descripcion</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.description }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <textarea\r\n          rows=\"4\"\r\n          cols=\"38\"\r\n          formControlName=\"description\"\r\n          [(ngModel)]=\"resourceDetailsoModel.description\"\r\n          type=\"text\"\r\n          id=\"inputDescription\"\r\n          placeholder=\"Description\"\r\n        >\r\n        </textarea>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Metadata</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <div\r\n          class=\"btn-group btn-space\"\r\n          role=\"group\"\r\n          *ngFor=\"let metadata of resourceDetailsoModel?.metadata\"\r\n        >\r\n          <button type=\"button\" class=\"btn btn-outline-primary\">\r\n            {{ metadata }}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border\">\r\n      <button\r\n        *ngIf=\"!showInputText\"\r\n        type=\"button\"\r\n        (click)=\"edit()\"\r\n        class=\"btn btn-primary btn-lg btn-block\"\r\n      >\r\n        Modificar\r\n      </button>\r\n\r\n      <button\r\n        *ngIf=\"showInputText\"\r\n        type=\"button\"\r\n        (click)=\"update()\"\r\n        class=\"btn btn-primary btn-lg btn-block\"\r\n        [disabled]=\"!detailResourceForm.valid\"\r\n      >\r\n        Actualizar\r\n      </button>\r\n    </div>\r\n  </form>\r\n</div>\r\n"
+module.exports = "<div class=\"details-container\">\r\n  <form [formGroup]=\"detailResourceForm\">\r\n    <div class=\"row border bg-primary\">\r\n      <div class=\"col-sm\">\r\n        <p>Recurso: {{ resourceDetailsoModel?.name }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border align-items-center\">\r\n      <div class=\"col-sm\">\r\n        <div class=\"text-center\">\r\n          <img [src]=\"resourceDetailsoModel?.thumbnail\" width=\"100\" height=\"100\" />\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showInputText\">\r\n      <div class=\"col-sm-6 border\">Nombre</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <input formControlName=\"name\" [(ngModel)]=\"resourceDetailsoModel.name\" type=\"text\" id=\"inputName\"\r\n          placeholder=\"Nombre\" />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Tipo</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.type }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Autor</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.author }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha creacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.creationDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Responsable</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.lastUserModification }}\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha actualizacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.updateDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Descripcion</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.description }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <textarea rows=\"4\" cols=\"38\" formControlName=\"description\" [(ngModel)]=\"resourceDetailsoModel.description\"\r\n          type=\"text\" id=\"inputDescription\" placeholder=\"Description\">\r\n        </textarea>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Metadata</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <div class=\"btn-group btn-space\" role=\"group\" *ngFor=\"let metadata of resourceDetailsoModel?.metadata\">\r\n          <button type=\"button\" class=\"btn btn-outline-primary\">\r\n            {{ metadata }}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border\">\r\n      <button *ngIf=\"!showInputText\" type=\"button\" (click)=\"edit()\" class=\"btn btn-primary btn-lg btn-block\">\r\n        Modificar\r\n      </button>\r\n\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"update()\" class=\"btn btn-primary btn-lg btn-block\"\r\n        [disabled]=\"!detailResourceForm.valid\">\r\n        Actualizar\r\n      </button>\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"cancelEdit()\" class=\"btn btn-secondary btn-lg btn-block\">\r\n        Cancelar\r\n      </button>\r\n    </div>\r\n  </form>\r\n</div>"
 
 /***/ }),
 
@@ -420,6 +421,7 @@ var DetalleRecursoComponent = /** @class */ (function () {
         this.showInputText = false;
         this.route.params.subscribe(function (param) {
             _this.getResourceDetail(Number(param["id"]));
+            _this.idResource = Number(param["id"]);
         });
     }
     DetalleRecursoComponent.prototype.ngOnInit = function () {
@@ -428,14 +430,17 @@ var DetalleRecursoComponent = /** @class */ (function () {
     DetalleRecursoComponent.prototype.edit = function () {
         this.showInputText = true;
     };
+    DetalleRecursoComponent.prototype.cancelEdit = function () {
+        this.showInputText = false;
+    };
     DetalleRecursoComponent.prototype.loadForm = function () {
         this.detailResourceForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            type: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            type: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
             name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            author: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            updateDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            metadata: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]("")
+            author: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
+            updateDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
+            description: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
+            metadata: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
         });
     };
     DetalleRecursoComponent.prototype.getResourceDetail = function (id) {
@@ -445,7 +450,8 @@ var DetalleRecursoComponent = /** @class */ (function () {
             .subscribe(function (response) {
             _this.resourceDetailsoModel = {
                 type: response.tipo,
-                author: response.autor,
+                author: response.getAutor,
+                lastUserModification: response.getResponsableModificacion,
                 updateDate: response.fecha_ultima_modificacion,
                 creationDate: response.fecha_creacion,
                 responsable: response.usuario_ultima_modificacion,
@@ -457,13 +463,19 @@ var DetalleRecursoComponent = /** @class */ (function () {
         });
     };
     DetalleRecursoComponent.prototype.update = function () {
+        var _this = this;
         this.showInputText = false;
-        console.log(this.detailResourceForm.valid);
-        // this.resourceDetailsRestClientService
-        //   .updateResourceDetail({})
-        //   .subscribe(response => {
-        //     console.log(response);
-        //   });
+        if (this.detailResourceForm.valid) {
+            var json = {
+                name: this.detailResourceForm.controls.name.value,
+                description: this.detailResourceForm.controls.description.value,
+                lastUserModification: 'Crisian Sepulveda XD'
+            };
+            console.log(json);
+            this.resourceDetailsRestClientService.updateResourceDetail(json).subscribe(function (response) {
+                _this.getResourceDetail(_this.idResource);
+            });
+        }
     };
     DetalleRecursoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -599,8 +611,9 @@ var ResourceDetailsRestClientService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (reponse) { return reponse.json(); }));
     };
     ResourceDetailsRestClientService.prototype.updateResourceDetail = function (data) {
+        var json = { "nombre": data.description, "descripcion": data.name, "usuario_ultima_modificacion": data.lastUserModification };
         return this.http
-            .post(_constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].SERVER_URL, data)
+            .put(_constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].SERVER_URL + _constants_url_constant__WEBPACK_IMPORTED_MODULE_4__["UrlConstant"].RESOURCE_DETAILS_UPDATE_ENDPOINT, json)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (reponse) { return reponse.json(); }));
     };
     ResourceDetailsRestClientService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
