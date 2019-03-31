@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">  \r\n  <form name=\"\" class=\"card\" [formGroup]=\"registerForm\">\r\n    <h2 name=\"title\">Agregar un Recurso</h2>\r\n    <h3 name=\"Loading\" [hidden]=\"!uploading\">Subiendo Archivo</h3>\r\n    <button class=\"btn btn-primary\" type=\"button\" id=\"file btn\" [disabled]=\"FileSelected\" (click)=\"addFiles()\">Seleccionar Archivo</button>   \r\n    <input class=\"form-control\" type=\"file\" #file style=\"display: none\" (change)=\"onFilesAdded()\"/>\r\n    <table class=\"table form-horizontal\">\r\n        <tbody>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"nombre\" class=\"col-xs-2 control-label\">Nombre</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"nombre\" formControlName=\"nombre\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"tipo\" class=\"col-xs-2 control-label\">Tipo</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"tipo\" formControlName=\"tipo\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"autor\" class=\"col-xs-2 control-label\">Autor</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"autor\" formControlName=\"autor\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"fechaCreacion\" class=\"col-xs-2 control-label\">Fecha creación</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"fechaCreacion\" formControlName=\"fechaCreacion\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"descripcion\" class=\"col-xs-2 control-label\">Descripción</label></td>\r\n              <td><input type=\"textarea\" rows=\"4\" cols=\"50\" class=\"col-xs-4 form-control\" id=\"descripcion\" formControlName=\"descripcion\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><button class=\"btn btn-primary\" id=\"send\" name=\"send\" type=\"submit\" (click)=\"register()\">Guardar</button></td>\r\n              <td><button class=\"btn btn-secondary\" (click)=\"goBack()\">Cancelar</button></td>\r\n            </tr>\r\n          </tbody>\r\n      </table>\r\n  </form>\r\n</div>"
+module.exports = "<div class=\"container\">  \r\n  <form name=\"\" class=\"card\" [formGroup]=\"registerForm\">\r\n    <h2 name=\"title\">Agregar un Recurso</h2>\r\n    <p name=\"Loading\" [hidden]=\"!uploading\">Subiendo Archivo</p>\r\n    <p name=\"Loading\" [hidden]=\"!uploadSuccessful\">Finalizado exitosamente</p>\r\n    <button class=\"btn btn-primary\" type=\"button\" id=\"file btn\" [disabled]=\"FileSelected\" (click)=\"addFiles()\">Seleccionar Archivo</button>   \r\n    <input class=\"form-control\" type=\"file\" #file style=\"display: none\" (change)=\"onFilesAdded()\"/>\r\n    <table class=\"table form-horizontal\">\r\n        <tbody>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"nombre\" class=\"col-xs-2 control-label\">Nombre</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"nombre\" formControlName=\"nombre\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"tipo\" class=\"col-xs-2 control-label\">Tipo</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"tipo\" formControlName=\"tipo\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"autor\" class=\"col-xs-2 control-label\">Autor</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"autor\" formControlName=\"autor\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"fechaCreacion\" class=\"col-xs-2 control-label\">Fecha creación</label></td>\r\n              <td><input type=\"text\" class=\"col-xs-4 form-control\" id=\"fechaCreacion\" formControlName=\"fechaCreacion\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><label for=\"descripcion\" class=\"col-xs-2 control-label\">Descripción</label></td>\r\n              <td><input type=\"textarea\" rows=\"4\" cols=\"50\" class=\"col-xs-4 form-control\" id=\"descripcion\" formControlName=\"descripcion\"></td>\r\n            </tr>\r\n            <tr>\r\n              <th scope=\"row\"></th>\r\n              <td><button class=\"btn btn-primary\" [disabled]=\"!registerForm.valid\" id=\"send\" name=\"send\" type=\"submit\" (click)=\"register()\">Guardar</button></td>\r\n              <td><button class=\"btn btn-secondary\" (click)=\"goBack()\">Cancelar</button></td>\r\n            </tr>\r\n          </tbody>\r\n      </table>\r\n  </form>\r\n</div>"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"container\">  \r\n  <form name=\"\" class=\"card\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  -o-font-smoothing: antialiased;\n  text-rendering: optimizeLegibility; }\n\n.container {\n  max-width: 400px;\n  width: 100%;\n  margin: 0 auto;\n  position: relative; }\n\n#file {\n  visibility: hidden; }\n\n.card {\n  background: #F9F9F9;\n  padding: 25px;\n  margin: 150px 0;\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }\n\ntitle {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQWdyZWdhclJlY3Vyc28vQzpcXFVzZXJzXFxDcmlzdGlhblxcT25lRHJpdmVcXERvY3VtZW50b3NcXFVuaXZlcnNpZGFkXFxVTklBTkRFU1xcU0lTUkVELUZyb250ZW5kL3NyY1xcYXBwXFxBZ3JlZ2FyUmVjdXJzb1xcYWdyZWdhci1yZWN1cnNvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksU0FBUztFQUNULFVBQVU7RUFDVixzQkFBc0I7RUFDdEIsOEJBQThCO0VBQzlCLDJCQUEyQjtFQUMzQixtQ0FBbUM7RUFDbkMsZ0NBQWdDO0VBQ2hDLDhCQUE4QjtFQUM5QixrQ0FBa0MsRUFBQTs7QUFFdEM7RUFDSSxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGNBQWM7RUFDZCxrQkFBa0IsRUFBQTs7QUFHdEI7RUFBUSxrQkFBa0IsRUFBQTs7QUFHMUI7RUFDSSxtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLGVBQWU7RUFDZiwwRUFBMEUsRUFBQTs7QUFHOUU7RUFDSSxrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL0FncmVnYXJSZWN1cnNvL2FncmVnYXItcmVjdXJzby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICAtd2Via2l0LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcclxuICAgIC1tb3otZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgLW8tZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgdGV4dC1yZW5kZXJpbmc6IG9wdGltaXplTGVnaWJpbGl0eTtcclxufVxyXG4uY29udGFpbmVyIHtcclxuICAgIG1heC13aWR0aDogNDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4jZmlsZSB7IHZpc2liaWxpdHk6IGhpZGRlbjsgfVxyXG5cclxuXHJcbi5jYXJkIHtcclxuICAgIGJhY2tncm91bmQ6ICNGOUY5Rjk7XHJcbiAgICBwYWRkaW5nOiAyNXB4O1xyXG4gICAgbWFyZ2luOiAxNTBweCAwO1xyXG4gICAgYm94LXNoYWRvdzogMCAwIDIwcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgNXB4IDVweCAwIHJnYmEoMCwgMCwgMCwgMC4yNCk7XHJcbn1cclxuXHJcbnRpdGxlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuXHJcbiJdfQ== */"
+module.exports = "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  -o-font-smoothing: antialiased;\n  text-rendering: optimizeLegibility; }\n\n.container {\n  max-width: 400px;\n  width: 100%;\n  margin: 0 auto;\n  position: relative; }\n\n#file {\n  visibility: hidden; }\n\n.card {\n  background: #F9F9F9;\n  padding: 25px;\n  margin: 150px 0;\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }\n\ntitle {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQWdyZWdhclJlY3Vyc28vQzpcXFVzZXJzXFxhbGVqYVxcRG9jdW1lbnRzXFxTSVNSRUQtRnJvbnRlbmQvc3JjXFxhcHBcXEFncmVnYXJSZWN1cnNvXFxhZ3JlZ2FyLXJlY3Vyc28uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxTQUFTO0VBQ1QsVUFBVTtFQUNWLHNCQUFzQjtFQUN0Qiw4QkFBOEI7RUFDOUIsMkJBQTJCO0VBQzNCLG1DQUFtQztFQUNuQyxnQ0FBZ0M7RUFDaEMsOEJBQThCO0VBQzlCLGtDQUFrQyxFQUFBOztBQUV0QztFQUNJLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsY0FBYztFQUNkLGtCQUFrQixFQUFBOztBQUd0QjtFQUFRLGtCQUFrQixFQUFBOztBQUcxQjtFQUNJLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsZUFBZTtFQUNmLDBFQUEwRSxFQUFBOztBQUc5RTtFQUNJLGtCQUFrQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvQWdyZWdhclJlY3Vyc28vYWdyZWdhci1yZWN1cnNvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIC13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIC1tb3otYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgLW1vei1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgICAtby1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgICB0ZXh0LXJlbmRlcmluZzogb3B0aW1pemVMZWdpYmlsaXR5O1xyXG59XHJcbi5jb250YWluZXIge1xyXG4gICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbiNmaWxlIHsgdmlzaWJpbGl0eTogaGlkZGVuOyB9XHJcblxyXG5cclxuLmNhcmQge1xyXG4gICAgYmFja2dyb3VuZDogI0Y5RjlGOTtcclxuICAgIHBhZGRpbmc6IDI1cHg7XHJcbiAgICBtYXJnaW46IDE1MHB4IDA7XHJcbiAgICBib3gtc2hhZG93OiAwIDAgMjBweCAwIHJnYmEoMCwgMCwgMCwgMC4yKSwgMCA1cHggNXB4IDAgcmdiYSgwLCAwLCAwLCAwLjI0KTtcclxufVxyXG5cclxudGl0bGUge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -112,36 +112,44 @@ var AgregarRecursoComponent = /** @class */ (function () {
     };
     AgregarRecursoComponent.prototype.register = function () {
         var _this = this;
+        this.uploadSuccessful = false;
         var nombre = this.registerForm.get('nombre').value;
         var tipo = this.registerForm.get('tipo').value;
         var autor = this.registerForm.get('autor').value;
-        var fechaCreacion = this.registerForm.get('fechaCreacion').value;
         var descripcion = this.registerForm.get('descripcion').value;
         var url = this.url;
-        var recurso = { 'nombre': nombre, 'archivo': url, 'thumbnail': '', 'fecha_creacion': fechaCreacion,
-            'fecha_ultima_modificacion': fechaCreacion, 'tipo': tipo, 'descripcion': descripcion, 'metadata': [1],
-            'autor': 1, 'usuario_ultima_modificacion': 1, 'getAutor': autor, 'getResponsableModificacion': autor };
+        var recurso = { 'nombre': nombre, 'archivo': url, 'thumbnail': 'urlThumbnail',
+            'tipo': tipo, 'descripcion': descripcion, 'autor': 1 };
+        console.log(recurso);
         // set the component state to "uploading"
         this.uploading = true;
         // start the upload and save the progress map
-        this.progress = this.agregarRecursoRestClientService.upload(this.files);
-        // convert the progress map into an array
-        var allProgressObservables = [];
-        for (var key in this.progress) {
-            allProgressObservables.push(this.progress[key].progress);
-        }
-        // When all progress-observables are completed...
-        Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["forkJoin"])(allProgressObservables).subscribe(function (end) {
-            // ... the upload was successful...
-            _this.uploadSuccessful = true;
-            // ... and the component is no longer uploading
-            _this.uploading = false;
-        });
-        this.agregarRecursoRestClientService.upload(this.files);
         this.agregarRecursoRestClientService.register(recurso).subscribe(function (response) {
             console.log(response);
+            _this.progress = _this.agregarRecursoRestClientService.upload(_this.files);
+            // convert the progress map into an array
+            var allProgressObservables = [];
+            for (var key in _this.progress) {
+                allProgressObservables.push(_this.progress[key].progress);
+            }
+            // When all progress-observables are completed...
+            Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["forkJoin"])(allProgressObservables).subscribe(function (end) {
+                if (end[0] === 100) {
+                    _this.uploadSuccessful = true;
+                    // ... and the component is no longer uploading
+                    _this.uploading = false;
+                    _this.registerForm.reset();
+                    _this.files.clear();
+                    _this.FileSelected = false;
+                    _this.registerForm.controls.autor.enable();
+                    _this.registerForm.controls.fechaCreacion.enable();
+                    _this.registerForm.controls.tipo.enable();
+                }
+            });
         }, function (error) {
             console.log(error);
+            _this.uploadSuccessful = false;
+            _this.uploading = false;
             alert('Formulario Invalido');
             _this.registerForm.reset();
         });
@@ -527,9 +535,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var url = '/2/files/upload';
-var host = 'https://content.dropboxapi.com';
-var token = 'n8Swy7K2KQAAAAAAAAAADwCBX-iw2cbl4025vfMIc3G5ueK4NRNk65hdvXq6S0Hi';
+var url = 'https://content.dropboxapi.com/2/files/upload';
+var token = 'n8Swy7K2KQAAAAAAAAAAEhPhfmBUFQIkLeX-JZ5wHeCntHYtZr1WFAGKwv8yaz0-';
 var AgregarRecursoClientService = /** @class */ (function () {
     function AgregarRecursoClientService(http) {
         this.http = http;
@@ -542,21 +549,25 @@ var AgregarRecursoClientService = /** @class */ (function () {
             // create a new multipart-form for every file
             var formData = new FormData();
             formData.append('file', file, file.name);
-            var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', 'Bearer ' + token);
-            headers.set('Content-Type', 'application/octet-stream');
-            headers.set('Dropbox-API-Arg', JSON.stringify({
-                path: '/' + file.name,
-                mode: 'add',
-                autorename: true,
-                mute: false
-            }));
-            headers.set('Host', host);
-            headers.set('User-Agent', 'api-explorer-client');
+            var reqHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                'Authorization': 'Bearer ' + token,
+                'Content-Type': 'application/octet-stream',
+                'Dropbox-API-Arg': JSON.stringify({
+                    path: '/' + file.name,
+                    mode: 'overwrite',
+                    autorename: true,
+                    mute: false
+                }),
+                'User-Agent': 'api-explorer-client',
+            });
             // create a http-post request and pass the form
             // tell it to report the upload progress
             var req = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpRequest"]('POST', url, formData, {
+                headers: reqHeaders,
                 reportProgress: true
             });
+            console.log(JSON.stringify(req.headers));
+            console.log(JSON.stringify(req));
             // create a new progress-subject for every file
             var progress = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
             // send the http-request and subscribe for progress-updates
@@ -582,7 +593,7 @@ var AgregarRecursoClientService = /** @class */ (function () {
         return status;
     };
     AgregarRecursoClientService.prototype.register = function (user) {
-        return this.http.post("https://grupo1-sisred.herokuapp.com/recurso/", user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (response) { }));
+        return this.http.post("https://grupo1-sisred.herokuapp.com/recurso/recurso_post/", user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (response) { }));
     };
     AgregarRecursoClientService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -758,7 +769,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Cristian\OneDrive\Documentos\Universidad\UNIANDES\SISRED-Frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\aleja\Documents\SISRED-Frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })

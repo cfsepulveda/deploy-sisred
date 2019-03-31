@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Cristian\OneDrive\Documentos\Universidad\UNIANDES\SISRED-Frontend\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Users\Cristian\OneDrive\Documentos\Universidad\UNIANDES\SISRED-Frontend\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Users\aleja\Documents\SISRED-Frontend\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\aleja\Documents\SISRED-Frontend\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
 
 
 /***/ })
