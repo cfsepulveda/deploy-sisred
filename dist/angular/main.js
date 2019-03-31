@@ -303,6 +303,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _AgregarRecurso_agregar_recurso_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./AgregarRecurso/agregar-recurso.component */ "./src/app/AgregarRecurso/agregar-recurso.component.ts");
 /* harmony import */ var _services_agregar_recurso_client_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/agregar-recurso-client.service */ "./src/app/services/agregar-recurso-client.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+
 
 
 
@@ -335,7 +337,9 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_5__["HttpModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__["NgbAlertModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_13__["NgbPaginationModule"]
             ],
             providers: [_services_agregar_recurso_client_service__WEBPACK_IMPORTED_MODULE_12__["AgregarRecursoClientService"], _services_resource_details_rest_client_service__WEBPACK_IMPORTED_MODULE_4__["ResourceDetailsRestClientService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
@@ -389,7 +393,7 @@ module.exports = ".details-container{\r\n    width: 100%;\r\n    padding-right: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"details-container\">\r\n  <form [formGroup]=\"detailResourceForm\">\r\n    <div class=\"row border bg-primary\">\r\n      <div class=\"col-sm\">\r\n        <p>Recurso: {{ resourceDetailsoModel?.name }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border align-items-center\">\r\n      <div class=\"col-sm\">\r\n        <div class=\"text-center\">\r\n          <img [src]=\"resourceDetailsoModel?.thumbnail\" width=\"100\" height=\"100\" />\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showInputText\">\r\n      <div class=\"col-sm-6 border\">Nombre</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <input formControlName=\"name\" [(ngModel)]=\"resourceDetailsoModel.name\" type=\"text\" id=\"inputName\"\r\n          placeholder=\"Nombre\" />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Tipo</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.type }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Autor</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.author }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha creacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.creationDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Responsable</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.lastUserModification }}\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha actualizacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.updateDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Descripcion</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.description }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <textarea rows=\"4\" cols=\"38\" formControlName=\"description\" [(ngModel)]=\"resourceDetailsoModel.description\"\r\n          type=\"text\" id=\"inputDescription\" placeholder=\"Description\">\r\n        </textarea>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Metadata</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <div class=\"btn-group btn-space\" role=\"group\" *ngFor=\"let metadata of resourceDetailsoModel?.metadata\">\r\n          <button type=\"button\" class=\"btn btn-outline-primary\">\r\n            {{ metadata.tag }}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border\">\r\n      <button *ngIf=\"!showInputText\" type=\"button\" (click)=\"edit()\" class=\"btn btn-primary btn-lg btn-block\">\r\n        Modificar\r\n      </button>\r\n\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"updateResource()\" class=\"btn btn-primary btn-lg btn-block\"\r\n        [disabled]=\"!detailResourceForm.valid\">\r\n        Actualizar\r\n      </button>\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"cancelEdit()\" class=\"btn btn-secondary btn-lg btn-block\">\r\n        Cancelar\r\n      </button>\r\n    </div>\r\n  </form>\r\n</div>"
+module.exports = "<p>\r\n<ngb-alert *ngIf=\"successMessage\" type=\"success\" (close)=\"successMessage = null\">{{ successMessage }}</ngb-alert>\r\n</p>\r\n\r\n<div class=\"details-container\">\r\n  <form [formGroup]=\"detailResourceForm\">\r\n    <div class=\"row border bg-primary\">\r\n      <div class=\"col-sm\">\r\n        <p>Recurso: {{ resourceDetailsoModel?.name }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border align-items-center\">\r\n      <div class=\"col-sm\">\r\n        <div class=\"text-center\">\r\n          <img [src]=\"resourceDetailsoModel?.thumbnail\" width=\"100\" height=\"100\" />\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showInputText\">\r\n      <div class=\"col-sm-6 border\">Nombre</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <input formControlName=\"name\" [(ngModel)]=\"resourceDetailsoModel.name\" type=\"text\" id=\"inputName\"\r\n          placeholder=\"Nombre\" />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Tipo</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.type }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Autor</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.author }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha creacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.creationDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Responsable</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.lastUserModification }}\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Fecha actualizacion</div>\r\n      <div class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.updateDate | date: \"dd-MM-yyyy\" }}\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Descripcion</div>\r\n      <div *ngIf=\"!showInputText\" class=\"col-sm-6 border\">\r\n        {{ resourceDetailsoModel?.description }}\r\n      </div>\r\n      <div *ngIf=\"showInputText\" class=\"col-sm-6 border\">\r\n        <textarea rows=\"4\" cols=\"38\" formControlName=\"description\" [(ngModel)]=\"resourceDetailsoModel.description\"\r\n          type=\"text\" id=\"inputDescription\" placeholder=\"Description\">\r\n        </textarea>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-6 border\">Metadata</div>\r\n      <div class=\"col-sm-6 border\">\r\n        <div class=\"btn-group btn-space\" role=\"group\" *ngFor=\"let metadata of resourceDetailsoModel?.metadata\">\r\n          <button type=\"button\" class=\"btn btn-outline-primary\">\r\n            {{ metadata.tag }}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row border\">\r\n      <button *ngIf=\"!showInputText\" type=\"button\" (click)=\"edit()\" class=\"btn btn-primary btn-lg btn-block\">\r\n        Modificar\r\n      </button>\r\n\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"updateResource()\" class=\"btn btn-primary btn-lg btn-block\"\r\n        [disabled]=\"!detailResourceForm.valid\">\r\n        Actualizar\r\n      </button>\r\n      <button *ngIf=\"showInputText\" type=\"button\" (click)=\"cancelEdit()\" class=\"btn btn-secondary btn-lg btn-block\">\r\n        Cancelar\r\n      </button>\r\n    </div>\r\n  </form>\r\n</div>"
 
 /***/ }),
 
@@ -408,6 +412,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_resource_details_rest_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/resource-details-rest-client.service */ "./src/app/services/resource-details-rest-client.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
 
 
 
@@ -419,13 +427,19 @@ var DetalleRecursoComponent = /** @class */ (function () {
         this.route = route;
         this.resourceDetailsRestClientService = resourceDetailsRestClientService;
         this.showInputText = false;
+        this.staticAlertClosed = false;
+        this._success = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
         this.route.params.subscribe(function (param) {
             _this.idResource = Number(param["id"]);
         });
     }
     DetalleRecursoComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.loadForm();
         this.getResourceDetail(this.idResource);
+        setTimeout(function () { return _this.staticAlertClosed = true; }, 20000);
+        this._success.subscribe(function (message) { return _this.successMessage = message; });
+        this._success.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["debounceTime"])(5000)).subscribe(function () { return _this.successMessage = null; });
     };
     DetalleRecursoComponent.prototype.edit = function () {
         this.showInputText = true;
@@ -473,6 +487,7 @@ var DetalleRecursoComponent = /** @class */ (function () {
             };
             this.resourceDetailsRestClientService.updateResourceDetail(json).subscribe(function (response) {
                 _this.getResourceDetail(_this.idResource);
+                _this._success.next('Recurso: ' + _this.resourceDetailsoModel.name + ' editado con exito');
             });
         }
     };
