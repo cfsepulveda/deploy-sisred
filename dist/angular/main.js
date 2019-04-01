@@ -41,7 +41,7 @@ module.exports = "<div class=\"container\">  \r\n  <form name=\"\" class=\"card\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  -o-font-smoothing: antialiased;\n  text-rendering: optimizeLegibility; }\n\n.container {\n  max-width: 400px;\n  width: 100%;\n  margin: 0 auto;\n  position: relative; }\n\n#file {\n  visibility: hidden; }\n\n.card {\n  background: #F9F9F9;\n  padding: 25px;\n  margin: 150px 0;\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }\n\ntitle {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQWdyZWdhclJlY3Vyc28vQzpcXFVzZXJzXFxhbGVqYVxcRG9jdW1lbnRzXFxTSVNSRUQtRnJvbnRlbmQvc3JjXFxhcHBcXEFncmVnYXJSZWN1cnNvXFxhZ3JlZ2FyLXJlY3Vyc28uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxTQUFTO0VBQ1QsVUFBVTtFQUNWLHNCQUFzQjtFQUN0Qiw4QkFBOEI7RUFDOUIsMkJBQTJCO0VBQzNCLG1DQUFtQztFQUNuQyxnQ0FBZ0M7RUFDaEMsOEJBQThCO0VBQzlCLGtDQUFrQyxFQUFBOztBQUV0QztFQUNJLGdCQUFnQjtFQUNoQixXQUFXO0VBQ1gsY0FBYztFQUNkLGtCQUFrQixFQUFBOztBQUd0QjtFQUFRLGtCQUFrQixFQUFBOztBQUcxQjtFQUNJLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsZUFBZTtFQUNmLDBFQUEwRSxFQUFBOztBQUc5RTtFQUNJLGtCQUFrQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvQWdyZWdhclJlY3Vyc28vYWdyZWdhci1yZWN1cnNvLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiKiB7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIC13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIC1tb3otYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgLW1vei1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgICAtby1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgICB0ZXh0LXJlbmRlcmluZzogb3B0aW1pemVMZWdpYmlsaXR5O1xyXG59XHJcbi5jb250YWluZXIge1xyXG4gICAgbWF4LXdpZHRoOiA0MDBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcbiNmaWxlIHsgdmlzaWJpbGl0eTogaGlkZGVuOyB9XHJcblxyXG5cclxuLmNhcmQge1xyXG4gICAgYmFja2dyb3VuZDogI0Y5RjlGOTtcclxuICAgIHBhZGRpbmc6IDI1cHg7XHJcbiAgICBtYXJnaW46IDE1MHB4IDA7XHJcbiAgICBib3gtc2hhZG93OiAwIDAgMjBweCAwIHJnYmEoMCwgMCwgMCwgMC4yKSwgMCA1cHggNXB4IDAgcmdiYSgwLCAwLCAwLCAwLjI0KTtcclxufVxyXG5cclxudGl0bGUge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG5cclxuIl19 */"
+module.exports = "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  -o-font-smoothing: antialiased;\n  text-rendering: optimizeLegibility; }\n\n.container {\n  max-width: 400px;\n  width: 100%;\n  margin: 0 auto;\n  position: relative; }\n\n#file {\n  visibility: hidden; }\n\n.card {\n  background: #F9F9F9;\n  padding: 25px;\n  margin: 150px 0;\n  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); }\n\ntitle {\n  text-align: center; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQWdyZWdhclJlY3Vyc28vQzpcXFVzZXJzXFxBY2VyXFxEb2N1bWVudHNcXE9zY2FyXFxNYWVzdHJpYVxcUHJvY2Vzb3MgZGUgZGVzYXJyb2xsbyBhZ2lsZXNcXENvbmVjdGF0ZVxcU0lTUkVELUZyb250ZW5kL3NyY1xcYXBwXFxBZ3JlZ2FyUmVjdXJzb1xcYWdyZWdhci1yZWN1cnNvLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksU0FBUztFQUNULFVBQVU7RUFDVixzQkFBc0I7RUFDdEIsOEJBQThCO0VBQzlCLDJCQUEyQjtFQUMzQixtQ0FBbUM7RUFDbkMsZ0NBQWdDO0VBQ2hDLDhCQUE4QjtFQUM5QixrQ0FBa0MsRUFBQTs7QUFFdEM7RUFDSSxnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGNBQWM7RUFDZCxrQkFBa0IsRUFBQTs7QUFHdEI7RUFBUSxrQkFBa0IsRUFBQTs7QUFHMUI7RUFDSSxtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLGVBQWU7RUFDZiwwRUFBMEUsRUFBQTs7QUFHOUU7RUFDSSxrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL0FncmVnYXJSZWN1cnNvL2FncmVnYXItcmVjdXJzby5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIioge1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICAtd2Via2l0LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcclxuICAgIC1tb3otZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgLW8tZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgdGV4dC1yZW5kZXJpbmc6IG9wdGltaXplTGVnaWJpbGl0eTtcclxufVxyXG4uY29udGFpbmVyIHtcclxuICAgIG1heC13aWR0aDogNDAwcHg7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4jZmlsZSB7IHZpc2liaWxpdHk6IGhpZGRlbjsgfVxyXG5cclxuXHJcbi5jYXJkIHtcclxuICAgIGJhY2tncm91bmQ6ICNGOUY5Rjk7XHJcbiAgICBwYWRkaW5nOiAyNXB4O1xyXG4gICAgbWFyZ2luOiAxNTBweCAwO1xyXG4gICAgYm94LXNoYWRvdzogMCAwIDIwcHggMCByZ2JhKDAsIDAsIDAsIDAuMiksIDAgNXB4IDVweCAwIHJnYmEoMCwgMCwgMCwgMC4yNCk7XHJcbn1cclxuXHJcbnRpdGxlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuXHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -376,6 +376,7 @@ var UrlConstant = /** @class */ (function () {
     UrlConstant.SERVER_URL = "https://grupo1-sisred.herokuapp.com";
     UrlConstant.RESOURCE_DETAILS_ENDPOINT = "/recurso/recurso_get/";
     UrlConstant.RESOURCE_DETAILS_UPDATE_ENDPOINT = "/recurso/recurso_put/";
+    UrlConstant.ADVANCE_RED_ENDPOINT = "/recurso/fase_byid";
     return UrlConstant;
 }());
 
@@ -509,6 +510,48 @@ var DetalleRecursoComponent = /** @class */ (function () {
             _services_resource_details_rest_client_service__WEBPACK_IMPORTED_MODULE_4__["ResourceDetailsRestClientService"]])
     ], DetalleRecursoComponent);
     return DetalleRecursoComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/advance-red-rest-client.service.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/services/advance-red-rest-client.service.ts ***!
+  \*************************************************************/
+/*! exports provided: AdvanceRedRestClientService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdvanceRedRestClientService", function() { return AdvanceRedRestClientService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _constants_url_constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constants/url-constant */ "./src/app/constants/url-constant.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+var AdvanceRedRestClientService = /** @class */ (function () {
+    function AdvanceRedRestClientService(http) {
+        this.http = http;
+    }
+    AdvanceRedRestClientService.prototype.getAdvanceRed = function () {
+        return this.http
+            .get(_constants_url_constant__WEBPACK_IMPORTED_MODULE_3__["UrlConstant"].SERVER_URL + _constants_url_constant__WEBPACK_IMPORTED_MODULE_3__["UrlConstant"].ADVANCE_RED_ENDPOINT)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (reponse) { return reponse.json(); }));
+    };
+    AdvanceRedRestClientService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_2__["Http"]])
+    ], AdvanceRedRestClientService);
+    return AdvanceRedRestClientService;
 }());
 
 
@@ -670,7 +713,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Main content -->\r\n<section class=\"content\">\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-md-8\">\r\n      <div class=\"col-md-12\">\r\n        <p>Avance del RED:&nbsp;<a href=\"http://www.lipsum.com/\">Video de introducci&oacute;n al curso de procesos agiles</a></p>\r\n      </div>\r\n      <div class=\"col-md-12\">\r\n        <p>Proyecto conectate:&nbsp;<strong>Maestria MISO</strong></p>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-4\" style=\"text-align: right\">\r\n      <a class=\"btn btn-app\">\r\n        <i class=\"fa fa-repeat\"></i> Repeat\r\n      </a>\r\n    </div>    \r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n      <div class=\"box\">\r\n        <div class=\"box-header\">\r\n          <h3 class=\"box-title\"></h3>\r\n        </div>\r\n        <!-- /.box-header -->\r\n        <div class=\"box-body\">\r\n          <table id=\"example1\" class=\"table table-bordered table-striped\">\r\n            <thead>\r\n              <tr>\r\n                <th>RED</th>\r\n                <th>Asignado</th>\r\n                <th>Iniciado</th>\r\n                <th>En proceso</th>\r\n                <th>Pausado</th>\r\n                <th>Terminado</th>\r\n                <th>Term. parcial</th>\r\n                <th>Cancelado</th>\r\n              </tr>\r\n            </thead>\r\n            <tbody>\r\n              <tr>\r\n                <td>Video de introducci&oacute;n al curso Procesos &Aacute;giles</td>\r\n                <td></td>\r\n                <td>\r\n                    \r\n                </td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n              </tr>\r\n            </tbody>\r\n            <tfoot>\r\n              <tr>\r\n                <th>RED</th>\r\n                <th>Asignado</th>\r\n                <th>Iniciado</th>\r\n                <th>En proceso</th>\r\n                <th>Pausado</th>\r\n                <th>Terminado</th>\r\n                <th>Term. parcial</th>\r\n                <th>Cancelado</th>\r\n              </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n        <!-- /.box-body -->\r\n      </div>\r\n      <!-- /.box -->\r\n    </div>\r\n    <!-- /.col -->\r\n  </div>\r\n  <!-- /.row -->\r\n  \r\n  <div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n      <div class=\"box\">\r\n        <div class=\"box-header\">\r\n          <h3 class=\"box-title\">Avance de sub-productos del RED</h3>\r\n        </div>\r\n        <!-- /.box-header -->\r\n        <div class=\"box-body\">\r\n          <table id=\"example1\" class=\"table table-bordered table-striped\">\r\n            <thead>\r\n              <tr>\r\n                <th>Sub-productos</th>\r\n                <th>Asignado</th>\r\n                <th>Iniciado</th>\r\n                <th>En proceso</th>\r\n                <th>Pausado</th>\r\n                <th>Terminado</th>\r\n                <th>Term. parcial</th>\r\n                <th>Cancelado</th>\r\n              </tr>\r\n            </thead>\r\n            <tbody>\r\n              <tr>\r\n                <td>Animaci&oacute;n</td>\r\n                <td></td>\r\n                <td><span class=\"label label-success\">Approved</span></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n              </tr>\r\n              <tr>\r\n                <td>Cortinilla</td>\r\n                <td></td>\r\n                <td></td>\r\n                <td><span class=\"label label-warning\">In process</span></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n              </tr>\r\n              <tr>\r\n                <td>Animaci&oacute;n</td>\r\n                <td></td>\r\n                <td><span class=\"label label-success\">Approved</span></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n                <td></td>\r\n              </tr>\r\n            </tbody>\r\n            <tfoot>\r\n              <tr>\r\n                <th>Sub-productos</th>\r\n                <th>Asignado</th>\r\n                <th>Iniciado</th>\r\n                <th>En proceso</th>\r\n                <th>Pausado</th>\r\n                <th>Terminado</th>\r\n                <th>Term. parcial</th>\r\n                <th>Cancelado</th>\r\n              </tr>\r\n            </tfoot>\r\n          </table>\r\n        </div>\r\n        <!-- /.box-body -->\r\n      </div>\r\n      <!-- /.box -->\r\n    </div>\r\n    <!-- /.col -->\r\n  </div>\r\n  <!-- /.row -->\r\n  \r\n</section>\r\n<!-- /.content -->"
+module.exports = "<div class=\"container\">\r\n  <form>\r\n  \r\n    <div class=\"row\">\r\n      <div class=\"col-md-8\">\r\n        <div class=\"row\">\r\n          <p>Avance del RED: <a href=\"https://agiles-grupo1-sisred.herokuapp.com/consultar-proyectos/recurso/\">{{ red?.nombre }}</a></p>  \r\n        </div>\r\n        <div class=\"row\">\r\n          <p>Proyecto Conecta-Te: <strong>{{ red?.getProyecto }}</strong></p>\r\n        </div>\r\n      </div>\r\n      <!--/.col-md-8-->\r\n      <div class=\"col-md-4\" style=\"text-align: right\">\r\n        <h2>{{ red?.getFase }}</h2>\r\n      </div>\r\n      <!--/.col-md-4-->\r\n    </div><br>\r\n    <!--/.row-->\r\n\r\n    <div class=\"row\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-light\">\r\n          <tr>\r\n            <th scope=\"col\">RED</th>\r\n            <th scope=\"col\">Fase</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <th>{{ red?.nombre }}</th>\r\n            <td>{{ red?.getFase }}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <!--/.table-->\r\n    </div><br>\r\n    <!--/.row-->\r\n\r\n    <div class=\"row\">\r\n      <h5>Avance de sub-productos del RED</h5>\r\n    </div><br>\r\n    <!--/.row-->\r\n\r\n    <div class=\"row\">\r\n        <table class=\"table\">\r\n          <thead class=\"thead-light\">\r\n            <tr>\r\n              <th scope=\"col\">Sub-producto</th>\r\n              <th scope=\"col\">Fase</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let subreds of subred\">\r\n              <th>{{ subreds.nombre }}</th>\r\n              <td>{{ subreds.getFase }}</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n        <!--/.table-->\r\n      </div>\r\n      <!--/.row-->\r\n\r\n  </form>\r\n  <!--/.form-->\r\n</div>\r\n<!--/.container-->"
 
 /***/ }),
 
@@ -686,12 +729,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerAvanceRedComponent", function() { return VerAvanceRedComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_advance_red_rest_client_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/advance-red-rest-client.service */ "./src/app/services/advance-red-rest-client.service.ts");
+
+
+
 
 
 var VerAvanceRedComponent = /** @class */ (function () {
-    function VerAvanceRedComponent() {
+    function VerAvanceRedComponent(route, advanceRedRestClientService) {
+        this.route = route;
+        this.advanceRedRestClientService = advanceRedRestClientService;
+        this.route.params.subscribe();
+        //this.red={"getFase": "pre-produccion","getProyecto": "Proyecto ejemplo","nombre": "Test 1"};
     }
     VerAvanceRedComponent.prototype.ngOnInit = function () {
+        this.loadForm();
+        this.getAdvanceRed();
+    };
+    VerAvanceRedComponent.prototype.loadForm = function () {
+        this.advanceRedForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            nombre: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
+            getProyecto: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
+            getFase: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](""),
+        });
+    };
+    VerAvanceRedComponent.prototype.getAdvanceRed = function () {
+        var _this = this;
+        this.advanceRedRestClientService
+            .getAdvanceRed()
+            .subscribe(function (response) {
+            _this.red = response[0];
+            _this.subred = response;
+        });
     };
     VerAvanceRedComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -699,7 +770,8 @@ var VerAvanceRedComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./ver-avance-red.component.html */ "./src/app/ver-avance-red/ver-avance-red.component.html"),
             styles: [__webpack_require__(/*! ./ver-avance-red.component.css */ "./src/app/ver-avance-red/ver-avance-red.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _services_advance_red_rest_client_service__WEBPACK_IMPORTED_MODULE_4__["AdvanceRedRestClientService"]])
     ], VerAvanceRedComponent);
     return VerAvanceRedComponent;
 }());
@@ -769,7 +841,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\aleja\Documents\SISRED-Frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Acer\Documents\Oscar\Maestria\Procesos de desarrollo agiles\Conectate\SISRED-Frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })
