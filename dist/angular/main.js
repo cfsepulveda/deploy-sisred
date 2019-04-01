@@ -742,7 +742,6 @@ var VerAvanceRedComponent = /** @class */ (function () {
         this.route = route;
         this.advanceRedRestClientService = advanceRedRestClientService;
         this.route.params.subscribe();
-        //this.red={"getFase": "pre-produccion","getProyecto": "Proyecto ejemplo","nombre": "Test 1"};
     }
     VerAvanceRedComponent.prototype.ngOnInit = function () {
         this.loadForm();
