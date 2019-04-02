@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Acer\Documents\Oscar\Maestria\Procesos de desarrollo agiles\Conectate\SISRED-Frontend\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! C:\Users\Acer\Documents\Oscar\Maestria\Procesos de desarrollo agiles\Conectate\SISRED-Frontend\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! C:\Users\Cristian\OneDrive\Documentos\Universidad\UNIANDES\SISRED-Frontend\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\Cristian\OneDrive\Documentos\Universidad\UNIANDES\SISRED-Frontend\node_modules\bootstrap\dist\css\bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
 
 
 /***/ })
