@@ -5800,7 +5800,7 @@ var ComentarRestClientService = /** @class */ (function () {
                     idUsuario: "",
                     width: "",
                     height: "",
-                    rutaArchivo: "",
+                    rutaArchivo: comentario.archivos,
                     comentariosHijos: null,
                     cerrado: false,
                     resuelto: false,
@@ -6873,7 +6873,6 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     apiUrl: 'https://agiles-grupo1-sisred-back.herokuapp.com/api/'
-    //apiUrl: 'http://127.0.0.1:8000/api/'
 };
 /*
  * For easier debugging in development mode, you can import the following file
